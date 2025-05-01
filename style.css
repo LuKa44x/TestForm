@@ -3,6 +3,8 @@ body{
     background-color: #f0f0f0;
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    margin-top:200px; /* da sistemare */
+    margin-bottom:300px;
     padding: 0;
     display: flex;
     justify-content: center;
