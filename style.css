@@ -7,7 +7,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200vh;
+    height: auto; /* O semplicemente toglilo */
+    min-height: 100vh;
     color: #333;
     box-sizing: border-box;
     line-height: 1.6;
@@ -17,6 +18,9 @@ form{
     padding: 50px;
     border-radius: 20px 50px ;
     box-shadow: 30px 30px 16px rgba(65, 6, 99, 0.1);
+    width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
 }
 legend{
     font-size: 18px;
@@ -122,3 +126,39 @@ input[type="checkbox"]{
     margin-left: 20px;
     color: #600ebd;
 }
+
+@media (max-width: 600px) {
+    body{
+        padding: 0 50px;
+
+    }
+    .message-fieldset > .form-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #message {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .form-group-range,
+    .form-group-radio {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer > .form-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  input, textarea, select {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  input:focus, textarea:focus, select:focus {
+    border-color: #600ebd;
+    box-shadow: 0 0 5px rgba(96, 14, 189, 0.3);
+    outline: none;
+  }
+  

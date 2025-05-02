@@ -50,3 +50,14 @@ const range = document.getElementById('range');
   range.addEventListener('input', () => {
     valore.textContent = range.value;
   });
+
+const radioPineapplePizza = document.getElementById('AnanasPizza');
+
+radioPineapplePizza.addEventListener('click', () => {
+  if (radioPineapplePizza.checked) {
+    alert("You are not my friend anymore..");
+    radioPineapplePizza.disabled = true;
+    radioPineapplePizza.checked = false;
+    document.getElementById('pizza').checked = true;
+  }
+});
