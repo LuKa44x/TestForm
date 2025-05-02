@@ -29,7 +29,7 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
     alert("Messaggio inviato con successo!");
   })
   .catch(error => {
-    alert("Errore nell'invio!");
+    alert("Message flying to Luca!");
     console.error(error);
   });
 });
