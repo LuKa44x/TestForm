@@ -18,6 +18,7 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
     food: e.target.food.value,
     checkbox: e.target.checkbox.checked
   };
+  console.log("Dati inviati:", data);
 
   fetch("https://script.google.com/macros/s/AKfycbxZCq2d8nyPdzH0CnDRNN6LRgMtfY9p9xikCpR9Pns6_dqpoHEnmQut2gxxkXkzMxtn2g/exec", {
     method: "POST",
