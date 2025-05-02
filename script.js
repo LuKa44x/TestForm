@@ -22,7 +22,7 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
 
   fetch("https://script.google.com/macros/s/AKfycbxZCq2d8nyPdzH0CnDRNN6LRgMtfY9p9xikCpR9Pns6_dqpoHEnmQut2gxxkXkzMxtn2g/exec", {
     method: "POST",
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
   .then(res => res.json())
   .then(response => {
