@@ -89,6 +89,7 @@ input[type="radio"]{
     margin-left :0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 input[type="submit"]{
@@ -161,4 +162,33 @@ input[type="checkbox"]{
     box-shadow: 0 0 5px rgba(96, 14, 189, 0.3);
     outline: none;
   }
+  
+  input:hover, textarea:hover, select:hover {
+    border-color: #600ebd;
+    box-shadow: inset 1px 1px 3px rgba(96, 14, 189, 0.3);
+    background-color: #7450af18;
+  }
+    
+  input[type="file"]:hover,input[type="file"]:focus,
+  input[type="range"]:hover,input[type="range"]:focus,
+  input[type="radio"]:hover,input[type="radio"]:focus {
+    border-color: #ffffff;
+    background-color: #fff;
+    box-shadow: 0 0 5px #ffffff;
+  }
+
+  option:nth-of-type(even) {
+    background-color: #ffffff;
+    color: #000;
+  }
+  option:nth-of-type(odd) {
+    background-color: #59108a04;
+    color: #000;
+  }
+ 
+  option:checked{
+    font-weight: bold;
+  }
+  
+  
   

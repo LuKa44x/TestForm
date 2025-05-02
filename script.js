@@ -1,5 +1,26 @@
 document.getElementById("myForm").addEventListener("submit", function(e) {
   e.preventDefault();
+  const input = document.getElementById("bday");
+  const valore = input.value;
+
+
+  const dataInserita = new Date(valore);
+  const oggi = new Date();
+
+  const giornoInserito = dataInserita.getDate();
+  const meseInserito = dataInserita.getMonth(); // 0 = gennaio
+  const giornoOggi = oggi.getDate();
+  const meseOggi = oggi.getMonth();
+
+  if (giornoInserito === giornoOggi && meseInserito === meseOggi) {
+    
+console.log("Tanti auguri!");
+    // Cambia lo sfondo della pagina
+    document.body.style.backgroundImage = "url('https://i.pinimg.com/736x/06/58/aa/0658aad98543b5d8e51b73282672cb0b.jpg')";
+
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+  } 
 
   const data = {
     name: e.target.name.value,
@@ -18,7 +39,7 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
     food: e.target.food.value,
     checkbox: e.target.checkbox.checked
   };
-  console.log("Dati inviati:", data);
+
 
   fetch("https://script.google.com/macros/s/AKfycbxZCq2d8nyPdzH0CnDRNN6LRgMtfY9p9xikCpR9Pns6_dqpoHEnmQut2gxxkXkzMxtn2g/exec", {
     method: "POST",
@@ -29,7 +50,7 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
     alert("Messaggio inviato con successo!");
   })
   .catch(error => {
-    alert("Message flying to Luca!");
+    alert("Message is flying to Luca!");
     console.error(error);
   });
 });
@@ -61,3 +82,4 @@ radioPineapplePizza.addEventListener('click', () => {
     document.getElementById('pizza').checked = true;
   }
 });
+
