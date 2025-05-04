@@ -16,6 +16,7 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
     
 console.log("Tanti auguri!");
     // Cambia lo sfondo della pagina
+    document.querySelector("#myForm").style.opacity = "0.1";
     document.body.style.backgroundImage = "url('https://i.pinimg.com/736x/06/58/aa/0658aad98543b5d8e51b73282672cb0b.jpg')";
 
     document.body.style.backgroundSize = "cover";
